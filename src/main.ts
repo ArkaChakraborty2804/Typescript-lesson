@@ -1,25 +1,55 @@
-let myName: string = 'Arka'
+let stringArr = ['one','hey','Dave']
+let guitars = ['Strat','Les Paul',5150]
+let mixedData = ['EVH',1984,true]
 
-let sport: string
+stringArr[0] = 'Arka'
+stringArr.push('42')
 
-sport = 'Cricket'
-sport = 'Football'
+guitars[0] = 1923
+guitars.unshift('Arka')
 
-let meaningOfLife: number
-let isLoading: boolean
+// stringArr = mixedData
+mixedData = stringArr
+guitars = stringArr 
 
-meaningOfLife = 42
-isLoading = false
+// let bands: string[] = []
+// bands.push('Tarun')
 
-let album: string | number
-album = 'true'
-album = 3
 
-const sum = (a: number, b: string) => {
-    return a + b
+//tuples
+let bands: [string, number] =  ['Arka', 12]
+
+let mixed = ['John',1,false]
+
+mixed = bands
+// bands = mixed
+
+let array: (number|string|boolean)[] = []
+array.push('Tarun',12)
+
+//Objects
+let myObj: object
+myObj = []
+console.log(typeof(myObj))
+
+myObj = bands
+myObj = {}
+
+const exampleObj ={
+    prop1:"Dave",
+    prop2:true
 }
 
-let postId: string | number
-let isActive: number | boolean | string
+exampleObj.prop2 = false
 
-let re: RegExp = /\w+/g
+type Guitarist = {
+    name: string,
+    active: boolean,
+    albums: (string | number)[]
+}
+
+let evh: Guitarist = {
+    name: 'Arka',
+    active: false,
+    albums: [1984,5150,'Football']
+}
